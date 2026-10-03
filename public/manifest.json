@@ -1,1 +1,16 @@
-{"name":"BhuVedh Field","short_name":"BhuVedh","start_url":"/field","display":"standalone","background_color":"#EDF0E1","theme_color":"#241A10","icons":[]}
+{
+  "name": "BhuVedh Field",
+  "short_name": "BhuVedh",
+  "start_url": "/field",
+  "display": "standalone",
+  "background_color": "#EDF0E1",
+  "theme_color": "#241A10",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

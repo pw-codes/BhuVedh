@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { assess } from "@/lib/engine";
 import { weightOf } from "@/lib/evidence";
 import PrintButton from "@/components/PrintButton";
+import Brand from "@/components/Brand";
 
 export const dynamic = "force-dynamic";
 
@@ -87,6 +88,9 @@ export default async function Report({ params }: { params: { id: string } }) {
   return (
     <main className="report">
       <PrintButton />
+      <div className="report-brand">
+        <Brand compact variant="light" transparent />
+      </div>
       <h1>{spring.name}: recharge site report</h1>
       <p>
         {spring.lat.toFixed(5)}, {spring.lon.toFixed(5)} · {spring.elevation} m
