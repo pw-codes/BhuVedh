@@ -1,0 +1,5 @@
+import {factors,level} from '../../data/mock'
+import type {Spring} from '../../types'
+export function Factors({p}:{p:number}){return <div className="space-y-2">{factors(p).map(([k,v])=><div key={k} className="grid grid-cols-[110px_1fr_110px] gap-2 items-center text-xs"><span>{k}</span><div className="h-2 rounded bg-[#E3ECE0]"><div className="h-2 rounded bg-g transition-all duration-700" style={{width:Math.min(95,v)+'%'}}/></div><span className="text-slate-500">{level(v)}</span></div>)}</div>}
+export function Evidence({s}:{s:Spring}){const e=[['Terrain','Favorable slope and east-facing aspect upslope of the spring (demo).'],['Geology','Fractured phyllite with two lineaments crossing the springshed (demo).'],['Rainfall','Monsoon-dominated rainfall; infiltration window of ~4 months (demo).'],['Soil','Permeable loamy soil on upper slopes (demo).'],['Spring discharge',`${s.discharge} L/min, ${s.seasonality.toLowerCase()} at ${s.elevation} m (demo).`]]
+  return <ul className="space-y-2 text-sm">{e.map(([k,v])=><li key={k} className="border rounded-lg p-2.5 border-[#d5e0d2]"><b>{k}</b><p className="text-slate-600 text-xs mt-0.5">{v}</p></li>)}</ul>}

@@ -1,22 +1,28 @@
-generator client { provider = "prisma-client-js" }
-datasource db { provider = "sqlite"; url = env("DATABASE_URL") }
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
 
 model Spring {
-  id             Int     @id @default(autoincrement())
-  name           String
-  lat            Float
-  lon            Float
-  elevation      Int
-  lithology      String  // quartzite | limestone | schist | phyllite | shale
-  dipDeg         Float
-  dipAzimuth     Float   // bearing the strata dip toward
-  aspect         Float   // bearing the surface slopes toward
-  fractureDensity Float  // 0-1
-  lineamentDistM Float
-  dischargeLps   Float
-  declinePct     Float   // multi-year discharge decline
-  evidenceCount  Int     // independent field/lab evidence items
-  slopeDeg       Float
-  landslideRisk  Float   // 0-1
-  tenure         String  // community | forest | disputed
+  id              Int    @id @default(autoincrement())
+  name            String
+  lat             Float
+  lon             Float
+  elevation       Int
+  lithology       String // quartzite | limestone | schist | phyllite | shale
+  dipDeg          Float
+  dipAzimuth      Float // bearing the strata dip toward
+  aspect          Float // bearing the surface slopes toward
+  fractureDensity Float // 0-1
+  lineamentDistM  Float
+  dischargeLps    Float
+  declinePct      Float // multi-year discharge decline
+  evidenceCount   Int // independent field/lab evidence items
+  slopeDeg        Float
+  landslideRisk   Float // 0-1
+  tenure          String // community | forest | disputed
 }

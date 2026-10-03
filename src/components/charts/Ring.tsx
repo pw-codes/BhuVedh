@@ -1,0 +1,2 @@
+export default function Ring({v}:{v:number}){const r=30,c=2*Math.PI*r
+  return <svg width="76" height="76" viewBox="0 0 76 76"><circle cx="38" cy="38" r={r} fill="none" stroke="#E3ECE0" strokeWidth="7"/><circle cx="38" cy="38" r={r} fill="none" stroke="#0F6B57" strokeWidth="7" strokeLinecap="round" strokeDasharray={c} strokeDashoffset={c*(1-v/100)} transform="rotate(-90 38 38)" style={{transition:'stroke-dashoffset .8s'}}/><text x="38" y="43" textAnchor="middle" fontSize="16" fontWeight="700" fill="#18332D">{v}%</text></svg>}
